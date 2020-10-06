@@ -1,4 +1,4 @@
-.footer {
+.bottom-container {
     color: #ffffff;
     font-family: 'lato';
     font-weight: 300;
@@ -9,9 +9,14 @@
     flex-direction: column;
     border: solid black;
     height: 10%;
+    align-items: center;
+    width: 100%;
 }
  
 .center {
    display: flex;
    justify-content: center;
+}
+.fluid-container {
+    width: 100%;
 }

@@ -14,6 +14,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BoardslistComponent } from './boardslist/boardslist.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BoardslistComponent } from './boardslist/boardslist.component';
     AppRoutingModule,
     NoopAnimationsModule,
     MatSliderModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
