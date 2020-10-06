@@ -1,0 +1,17 @@
+.footer {
+    color: #ffffff;
+    font-family: 'lato';
+    font-weight: 300;
+    font-size: 30px;
+    background: orangered;
+    display: flex;
+    min-height: 1vh;
+    flex-direction: column;
+    border: solid black;
+    height: 10%;
+}
+ 
+.center {
+   display: flex;
+   justify-content: center;
+}

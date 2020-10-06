@@ -1,0 +1,14 @@
+.boardcontainer {
+    background-color: cyan; 
+    border: solid 4px black;
+    border-radius: 25px;
+    margin: 32px;
+    margin-top: 0px;
+    padding: 16px;
+    min-height: 650px ;
+    vertical-align: middle;
+}
+.center {
+    display: flex;
+    justify-content: center;
+ }
