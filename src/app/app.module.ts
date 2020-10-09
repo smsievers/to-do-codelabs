@@ -15,6 +15,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BoardslistComponent } from './boardslist/boardslist.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { BoardviewComponent } from './boardview/boardview.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     SidebarComponent,
     HomeComponent,
     BoardslistComponent,
+    BoardviewComponent,
     
   ],
   imports: [

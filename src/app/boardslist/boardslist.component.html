@@ -1,1 +1,13 @@
-<p>boardslist works!</p>
+<div class="button-row">
+    <button [routerLink]="'/add-board'">Add Board</button>
+</div> 
+
+<div class="row p-4 card-group">
+    <div class="col-lg-4 col-md-6 col-sm-12 p-2" *ngFor="let board of boards">
+        <div class="card" (click)="view(board)">
+            <div class="card-body">
+                <h3 class="card-title">{{board.title}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
