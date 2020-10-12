@@ -16,6 +16,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { BoardslistComponent } from './boardslist/boardslist.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BoardviewComponent } from './boardview/boardview.component';
+import { Routes, RouterModule } from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { BoardviewComponent } from './boardview/boardview.component';
     HomeComponent,
     BoardslistComponent,
     BoardviewComponent,
+   
     
   ],
   imports: [
@@ -37,7 +41,10 @@ import { BoardviewComponent } from './boardview/boardview.component';
     NoopAnimationsModule,
     MatSliderModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    RouterModule,
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

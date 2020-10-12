@@ -2,18 +2,27 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    background-color: chocolate;
+    // background-color:gray;
     width: 100%;
-    border: solid black;
-  }
+      }
 
 .body {
     width: 100%;
+    background-color: smoke;
 }
 
 .mat-sidenav-container {
     width: 20%;
-    background-color: chartreuse;
-    border: solid black;
+    background-color: slategray;
+   
+}
 
+.mat-toolbar {
+    background-color: darkslategray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link:hover {
+    cursor: pointer;
 }
