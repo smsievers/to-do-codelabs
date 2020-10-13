@@ -1,0 +1,52 @@
+<form #form [formGroup]='formGroup' (ngSubmit)="submitUser()">
+    <div class="big-container">
+        <div> 
+            <div class="base-container">
+                <h2>Email</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='email'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>First Name</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='firstName'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>Last Name</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='lastName'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>Username</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='username'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>Password</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='password'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>Confirm Password</h2>
+                <mat-form-field  appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='passwordConfirmation'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <button mat-raised-button type="submit">Submit</button>
+            </div>
+
+        </div> 
+    </div>
+</form>

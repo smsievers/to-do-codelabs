@@ -15,7 +15,7 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   signup(newUser: NewUser) {
-    return this.http.post(this.baseUrl + 'user/create', newUser);
+    return this.http.post(this.baseUrl + 'users', newUser);
   }
 
   signin(updatedUser: User): Observable<User> {

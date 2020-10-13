@@ -1,19 +1,30 @@
 <mat-toolbar role="heading">
     <span class='link' [routerLink]="['home']">To-Do</span>
     <span class='link' [routerLink]="['boards']">My Boards</span>
-    <span class='link' [routerLink]="['boardview/1']">Login Stuff Here</span>
+    <div class="link" *ngIf="signedIn">
+        <span [routerLink]="['/user']">{{username}}</span>
+        <span (click)="logout()">Sign Out</span>
+
+      </div>
+      <div class="links" *ngIf="!signedIn">
+        <span [routerLink]="['/sign-up']">Sign Up</span>
+        <span [routerLink]="['/sign-in']">Sign In</span>
+      </div>
 </mat-toolbar>
-    <div class="flex-container">  
         <mat-sidenav-container>
-            <mat-sidenav mode="push"></mat-sidenav>
+            <mat-sidenav mode="side" opened>
+                <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+                </mat-menu>
+            </mat-sidenav>
             <mat-sidenav-content>
-                <span>This is where we will put the menu</span>
+                <div class="body">
+                    <router-outlet></router-outlet>
+                </div>  
             </mat-sidenav-content>
             </mat-sidenav-container>
-        <div class="body">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-<mat-toolbar role="Footer">
+<mat-toolbar class="footer" role="Footer">
     <span>Created 2020 by Matt and Seth</span>
 </mat-toolbar>

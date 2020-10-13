@@ -1,2 +1,18 @@
-<p>Boardslist works!</p>
+<section>
+    <div class="button-row">
+      <button mat-raised-button [routerLink]= "['/createboard']">Add Board</button>
+    </div>
+  </section>
+
+<div class="row p-4 card-group">
+  
+    <div class="col-lg-4 col-md-6 col-sm-12 p-2" *ngFor="let board of boards">
+      <div class="card" (click)="view(board)">
+        <div class="card-body">
+          <h3 class="card-title">{{board.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
