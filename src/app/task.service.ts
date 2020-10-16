@@ -14,14 +14,14 @@ export class TaskService {
   }
 
   getAllBoards(): Observable<BoardData> {
-    return this.http.get<BoardData>(this.baseUrl + "boards/index");
+    return this.http.get<BoardData>(this.baseUrl + "boards");
   }
 
   getABoard(id: number): Observable<any> {
-    return this.http.get(this.baseUrl + "boards/show?id=" + id);
+    return this.http.get(this.baseUrl + "boards/" + id);
   }
 
   addBoard(board: Board) {
-    return this.http.post(this.baseUrl + 'boards/create', board);
+    return this.http.post(this.baseUrl + 'boards', board);
   }
 }

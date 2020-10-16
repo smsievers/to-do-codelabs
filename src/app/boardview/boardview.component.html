@@ -1,5 +1,5 @@
-<div class='card-container'>
-    <mat-card-title class="center">This is Where the Board Title Will Go</mat-card-title>
+<div class='card-container' *ngIf="board !== null">
+    <mat-card-title class="center">{{board.title}}</mat-card-title>
     <mat-card-subtitle class="center">The Subtitle is Here</mat-card-subtitle>
     <mat-card-content class="center">And the Content, of Course</mat-card-content>
 </div>

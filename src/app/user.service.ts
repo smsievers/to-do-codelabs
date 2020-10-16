@@ -15,10 +15,10 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   signup(newUser: NewUser) {
-    return this.http.post(this.baseUrl + 'users', newUser);
+    return this.http.post(this.baseUrl + 'users/create', newUser);
   }
 
-  signin(updatedUser: User): Observable<User> {
-    return this.http.put<User>(this.baseUrl + "users/update", updatedUser);
+  signin(user: NewUser): Observable<User> {
+    return this.http.post<User>(this.baseUrl + "users/login", user);
   }
 }

@@ -13,6 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private localStorageService: LocalStorageService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    console.log(this.localStorageService.isLoggedIn());
     if (this.localStorageService.isLoggedIn()) {
       request = request.clone({
         setHeaders: {

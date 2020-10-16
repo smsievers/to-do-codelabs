@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LocalStorageService } from '../local-storage.service';
 import { Board } from '../models/board';
 import { TaskService } from '../task.service';
 
@@ -8,16 +11,21 @@ import { TaskService } from '../task.service';
   styleUrls: ['./createboard.component.scss']
 })
 export class CreateboardComponent implements OnInit {
-  newBoard: Board = new Board();
-  constructor(private taskService: TaskService) { }
+  formGroup = new FormGroup({
+    title: new FormControl('', Validators.required)
+  });
+  constructor(private taskService: TaskService, private localStorage: LocalStorageService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   addBoard() {
-    this.taskService.addBoard(this.newBoard).subscribe(data => {
-      console.log(data);
-    });
+    console.log(this.formGroup.value);
+    const newBoard = new Board(this.formGroup.value)
+    this.taskService.addBoard(newBoard).subscribe((data: Board) => {
+      localStorage.setItem('title', data.title);
+    })
+    this.router.navigate(['boards'])
   }
 
 }

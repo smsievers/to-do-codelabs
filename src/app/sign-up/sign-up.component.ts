@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { from } from 'rxjs';
 import { UserService } from './../user.service';
 import { LocalStorageService } from './../local-storage.service'
 import { Router } from '@angular/router';
@@ -13,7 +12,7 @@ import { NewUser } from '../models/new-user';
 })
 export class SignUpComponent implements OnInit {
   formGroup = new FormGroup({
-    username: new FormControl('', Validators.required),
+    userName: new FormControl('', Validators.required),
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
@@ -29,7 +28,7 @@ export class SignUpComponent implements OnInit {
     console.log(this.formGroup.value);
     const newUser = new NewUser(this.formGroup.value)
     this.userService.signup(newUser).subscribe((data: User) => {
-      console.log(data);
+      console.log(newUser)
       this.localStorageService.saveUser(data);
       this.router.navigateByUrl('');
     });

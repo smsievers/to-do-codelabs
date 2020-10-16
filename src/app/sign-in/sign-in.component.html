@@ -1,1 +1,30 @@
-<p>sign-in works!</p>
+<form #form [formGroup]='formGroup' (ngSubmit)="(signIn())">
+    <div class="big-container">
+        <div>
+            <div class="base-container">
+                <h1>Sign Up</h1>
+            </div>
+        </div>
+        <div> 
+            <div class="base-container">
+                <h2>Email</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName='email'>
+                </mat-form-field>
+            </div>
+            <div class="base-container">
+                <h2>Password</h2>
+                <mat-form-field appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput type='password' formControlName='password'>
+                </mat-form-field>
+            </div>
+
+            <div class="base-container">
+                <button mat-raised-button type="submit">Submit</button>
+            </div>
+
+        </div> 
+    </div>
+</form>
