@@ -1,5 +1,5 @@
 <section>
-    <div class="button-row">
+    <div class="button-row" *ngIf="loggedIn()">
       <button mat-raised-button [routerLink]= "['/createboard']">Add Board</button>
     </div>
   </section>

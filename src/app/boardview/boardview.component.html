@@ -1,5 +1,12 @@
-<div class='card-container' *ngIf="board !== null">
+<section>
+    <div class="button-row" *ngIf="loggedIn()">
+      <button mat-raised-button [routerLink]= "['/createlist', board.id]">Add List</button>
+    </div>
+  </section>
+
+<div class='big-container' *ngIf="board">
     <mat-card-title class="center">{{board.title}}</mat-card-title>
-    <mat-card-subtitle class="center">The Subtitle is Here</mat-card-subtitle>
-    <mat-card-content class="center">And the Content, of Course</mat-card-content>
+    <div class="boardcontainer" *ngFor="let list of lists">
+        <h3>{{list.title}}</h3>
+    </div>
 </div>

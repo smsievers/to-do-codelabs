@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from '../local-storage.service';
 import { Board } from '../models/board';
-import { BoardData } from '../models/board-data';
 import { List } from '../models/list'
 import { TaskService } from '../task.service';
+
 @Component({
   selector: 'app-boardview',
   templateUrl: './boardview.component.html',
@@ -20,10 +20,10 @@ export class BoardviewComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       if (params.id) {
-        this.taskService.getABoard(params.id).subscribe(boardData => {
-          this.board = boardData.board
-        })
-        console.log(this.board)
+        this.taskService.getABoard(params.id).subscribe(data => {
+          this.board = data
+          this.lists = data.lists
+        });
       }
     });
   }
@@ -31,5 +31,3 @@ export class BoardviewComponent implements OnInit {
     return this.localStorageService.isLoggedIn();
   }
 }
-
-// FIX ME SETH

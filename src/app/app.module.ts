@@ -28,6 +28,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './auth.interceptor';
+import { CreatelistComponent } from './createlist/createlist.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AuthInterceptor } from './auth.interceptor';
     CreateboardComponent,
     SignUpComponent,
     SignInComponent,
+    CreatelistComponent,
    
     
   ],
